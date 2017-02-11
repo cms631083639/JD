@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/pureIndex.css">
 </head>
 <body>
-<!--//整个内容盒子-->
 <div class="jd_layout">
     <!--//固定的头部-->
     <header class="jd_header">
@@ -190,71 +189,7 @@
     </main>
 </div>
 <script src="js/zepto.min.js"></script>
-<!--如果想使用jq中的一些选择器，就需要引入selector.js:实验性的支持 jQuery CSS 表达式 实用功能，比如 $('div:first')和 el.is(':visible')。-->
 <script src="js/selector.js"></script>
-<!--如果想使用动画，则需要引入fs.js:   The animate()方法-->
-<!--<script src="js/fx.js"></script>-->
-<!--如果想响应手势，需要添加touch文件-->
-<!--<script src="js/touch.js"></script>-->
 <script src=js/index2.js></script>
-<!--<script>-->
-<!--$(function () {-->
-<!--//1.获取banner-->
-<!--var $banner = $(".jd_banner");-->
-<!--//2.获取banner的宽度-->
-<!--var width = $banner.width();-->
-<!--//3.获取需要进行轮播的图片盒子-->
-<!--var imgBox = $banner.find("ul:eq(0)");-->
-<!--//4.获取点盒子-->
-<!--var indicatorBox = $banner.find("ul:eq(1)");-->
-<!--//5.获取所有的点(li元素)-->
-<!--var lis = indicatorBox.find("li");-->
-<!--//6.定义图片索引，因为已经有了默认的偏移，所以索引从1开始-->
-<!--var index = 1;-->
-<!--//7.封装动画方法-->
-<!--var aniFuc = function () {-->
-<!--//7.1设置动画  参数说明：1.需要添加动画效果的属性 2.动画的持续时间(完成时间) 3.动画的速率样式 4.动画完成之后的回调函数-->
-<!--imgBox.animate({"transform": "translateX(" + (-index * width) + "px)"}, 200, "ease", function () {-->
-<!--//7.2判断当前的图片索引，如果是最后一张，，则以非动画的方式将其transform偏移到第1张，如果是第0张，则以非动画的方式将其移动到第8张-->
-<!--if (index == 9) { //最后一张-->
-<!--//重置索引-->
-<!--index = 1;-->
-<!--//设置偏移-->
-<!--imgBox.css({"transform": "translateX(" + (-index * width) + "px)"});-->
-<!--}-->
-<!--else if (index == 0) { //第0张-->
-<!--//重置索引-->
-<!--index = 8;-->
-<!--//设置 偏移-->
-<!--imgBox.css({"transform": "translateX(" + (-index * width) + "px)"});-->
-<!--}-->
-<!--//7.3设置点的样式-->
-<!--lis.removeClass("active").eq(index - 1).addClass("active");-->
-<!--});-->
-<!--}-->
-<!--//8.开启时钟-->
-<!--var timerId = setInterval(function () {-->
-<!--//8.1索引+1-->
-<!--index++;-->
-<!--//8.2 动画-->
-<!--aniFuc();-->
-<!--}, 2000);-->
-
-<!--//9.添加左滑动：在Zepto中没有提供滑动操作，只是提供的手势-->
-<!--imgBox.on("swipeLeft", function () {-->
-<!--//9.1 变换索引-->
-<!--index++;-->
-<!--//9.2 动画效果-->
-<!--aniFuc();-->
-<!--});-->
-<!--//10.添加右滑动-->
-<!--imgBox.on("swipeRight", function () {-->
-<!--//10.1 变换索引-->
-<!--index&#45;&#45;;-->
-<!--//10.2 动画效果-->
-<!--aniFuc();-->
-<!--});-->
-<!--});-->
-<!--</script>-->
 </body>
 </html>
