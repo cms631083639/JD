@@ -63,7 +63,7 @@ $(function () {
             addTransition(boxImg);
             // 5.3.进行图片的偏移
             setTransform(boxImg, -width * index);
-        }, 500);
+        }, 2000);
     }
 
     startTimer();
